@@ -1,0 +1,136 @@
+.lang {
+  position: absolute;
+  top: 2rem;
+  right: 3.2rem;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $white-color;
+
+  @media (max-width: 991px) {
+    right: auto;
+    left: 3.2rem;
+  }
+
+  button {
+    outline: transparent;
+  }
+
+  &__body {
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 5;
+    top: 42px;
+    background-color: #333333;
+  }
+
+  &__item {
+    position: relative;
+    padding: 10px 23px 10px 34px;
+    min-width: 75px;
+    min-height: 36px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    transition: 0.3s ease all;
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: $white-color;
+
+    &.active,
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__item[data-type="en"]::before {
+    background-image: url("../img/flag-en.svg");
+  }
+
+  &__item[data-type="ru"]::before {
+    background-image: url("../img/flag-ru.svg");
+  }
+
+  &__current {
+    position: relative;
+    padding: 10px 23px 10px 34px;
+    transition: 0.3s ease all;
+    text-transform: uppercase;
+    background-color: #333333;
+    border-radius: 10px;
+    min-width: 75px;
+    min-height: 36px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: $white-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 5px solid transparent;
+      border-top-color: #6b6f80;
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  &__current[data-type="en"]::before {
+    background-image: url("../img/flag-en.svg");
+  }
+
+  &__current[data-type="ru"]::before {
+    background-image: url("../img/flag-ru.svg");
+  }
+
+  &__current[data-type="fr"]::before {
+    background-image: url("../img/flag-fr.svg");
+  }
+
+  &_active {
+    .lang__body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lang__current::after {
+      transform: translateY(-70%) rotate(180deg);
+    }
+  }
+}

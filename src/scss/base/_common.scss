@@ -16,20 +16,29 @@ body.modal-open {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-left: 35rem;
+
+  @media (max-width: 991px) {
+    padding-left: 0;
+  }
 }
 
 .main {
   flex-grow: 1;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -45,3 +54,74 @@ body.modal-open {
   color: $black-color;
 }
 // call -   { @extend %text; }
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 3rem;
+  background-color: #333333;
+  color: $white-color;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+  transition: 0.3s ease background-color;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-color;
+  }
+
+  span {
+    margin: 0 0 0 0.5rem;
+    display: flex;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: $white-color;
+
+  @media (max-width: 400px) {
+    margin: 0 3rem;
+  }
+
+  span {
+    color: $yellow-color;
+  }
+}
+
+.scroll__top {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: none;
+
+  &:hover {
+    animation: scrollTopMove 0.5s ease infinite alternate;
+  }
+
+  &--active {
+    display: inline-block;
+  }
+}
+
+@keyframes scrollTopMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}

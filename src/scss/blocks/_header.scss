@@ -1,0 +1,125 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  transition: transform 0.3s linear;
+
+  @media (max-width: 991px) {
+    transform: translateX(-100%);
+  }
+
+  @media (max-width: 400px) {
+    width: 100vw;
+  }
+
+  &--toggle {
+    transform: translateX(0%);
+
+    @media (max-width: 991px) {
+      transform: translateX(0%);
+    }
+  }
+
+  .user {
+    img {
+      width: 17rem;
+      height: 17rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 0.7rem solid $yellow-color;
+      margin-left: auto;
+      margin-right: auto;
+      pointer-events: none;
+    }
+
+    &__name {
+      font-size: 3.5rem;
+      text-transform: none;
+      color: $white-color;
+    }
+
+    &__post {
+      font-size: 2rem;
+      color: #eeeeee;
+    }
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .menu {
+    padding: 1rem 3rem;
+
+    &__link {
+      display: block;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      background-color: #333333;
+      color: $white-color;
+      font-size: 2rem;
+      border-radius: 5rem;
+      transition: 0.3s ease background-color;
+
+      &:hover {
+        background-color: $yellow-color;
+      }
+    }
+  }
+
+  .social {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+      display: inline-flex;
+
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      &:nth-child(1) .social__icon {
+        fill: #2ae92a;
+        width: 36px;
+        height: 36px;
+      }
+      &:nth-child(2) .social__icon {
+        fill: wheat;
+        width: 40px;
+        height: 40px;
+      }
+      &:nth-child(3) .social__icon {
+        fill: #52b5f7;
+        border-radius: 60%;
+        background-color: white;
+      }
+    }
+
+    &__link {
+      display: inline-flex;
+    }
+
+    &__icon {
+      transition: 0.3s ease transform;
+
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
+    }
+  }
+}

@@ -42,11 +42,12 @@
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
     "sass": "^1.49.7",
-    "vanilla-lazyload": "^17.5.1",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "^5.68.0",
     "webpack-stream": "^7.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vanilla-lazyload": "^17.5.1"
+  }
 }

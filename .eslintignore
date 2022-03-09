@@ -1,3 +1,4 @@
 /gulp
 /dist
+/src/js/libs
 gulpfile.js

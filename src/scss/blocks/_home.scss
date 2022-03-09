@@ -1,0 +1,54 @@
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+
+  @media (max-width: 1200px) {
+    padding: 1rem 4rem;
+  }
+
+  &__subtitle {
+    font-size: 2.5rem;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 5rem;
+    color: $white-color;
+    text-transform: uppercase;
+
+    span {
+      text-transform: capitalize;
+      color: $yellow-color;
+    }
+  }
+
+  &__text {
+    padding: 1rem 0;
+    max-width: 110rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #eeeeee;
+    text-transform: none;
+    transition: 0.3s ease-in-out opacity;
+
+    div {
+      display: inline-block;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #eeeeee;
+      text-transform: none;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    fill: $white-color;
+  }
+}

@@ -1,0 +1,171 @@
+.contact {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+
+    @media (max-width: 400px) {
+      padding: 0;
+    }
+  }
+
+  &__info {
+    font-style: normal;
+  }
+
+  &__content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $white-color;
+    font-size: 3rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eeeeee;
+    padding: 1rem 0;
+    font-weight: normal;
+    transition: 0.3s ease color;
+
+    &:hover, &:focus {
+      color: $yellow-color;
+    }
+
+    &:first-child {
+      text-transform: none;
+
+      .contact__icon svg {
+        stroke: $yellow-color;
+        fill: none;
+      }
+    }
+
+    &:last-child {
+      .contact__icon svg {
+        stroke: $yellow-color;
+        fill: none;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+
+    svg {
+      fill: $yellow-color;
+    }
+  }
+
+  &__address {
+    transition: 0.3s ease color;
+
+    &:hover {
+      color: $yellow-color;
+    }
+
+    svg {
+      stroke: $yellow-color;
+      fill: none;
+    }
+  }
+
+  .feedback {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+    @media (max-width: 400px) {
+      margin: 3rem 0;
+    }
+
+    &__error {
+      width  : 100%;
+      padding: 0;
+      font-size: 1.5rem;
+      color: $white-color;
+      text-transform: none;
+      background-color: #f59292;
+
+      &_active {
+        display: inline-block;
+        padding: 0.8rem;
+      }
+    }
+
+    &__input {
+      padding: 1.5rem;
+      margin: 1rem 0;
+      background-color: #333333;
+      color: $white-color;
+      border: none;
+      text-transform: none;
+      font-size: 1.7rem;
+      width: 100%;
+      border: 2px solid transparent;
+      transition: border 0.3s ease;
+
+      &:hover, &:focus {
+        border: 2px solid $yellow-color;
+      }
+
+      &_invalid {
+        border-color: #900;
+
+        &:hover,
+        &:focus {
+          border: 2px solid #900;
+        }
+      }
+
+      &::placeholder {
+        text-transform: capitalize;
+      }
+    }
+
+    &__message {
+      height: 15rem;
+      resize: none;
+    }
+
+    &__timer {
+      position: absolute;
+      top: 100%;
+      color: #ee3434;
+      font-size: 2rem;
+      font-weight: 600;
+      display: none;
+
+      &_active {
+        display: block;
+      }
+
+      &-value {
+        color: $yellow-color;
+      }
+    }
+
+    &__btn {
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      svg {
+        stroke: $white-color;
+        fill: transparent;
+      }
+    }
+  }
+}

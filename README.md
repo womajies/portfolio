@@ -1,5 +1,5 @@
 # Shamil Magomedov
-## Web Developer
+## Portfolio Web Developer
 
 **На борту сборки:**
 * ES6 импорт плагинов

@@ -1,4 +1,40 @@
 extends base/_layout
 block head
-  title Main
+  title Portfolio
+block outsideComponents
+  .mouse(aria-hidden="true")
+    .mouse__view View
+  .preloader
+    span.preloader__back Front-End
+    p.preloader__forward.
+      This is my portfolio
+      <span class="preloader__background"></span>
 block page
+  include ./blocks/_components
+  include ./blocks/_home
+  include ./blocks/_about
+  include ./blocks/_experience
+  include ./blocks/_portfolio
+  include ./blocks/_contact
+block popups
+  a(href="#home" class="scroll__top" aria-label="Go to the top")
+    img(src="@img/scroll-top.png" alt="scroll top")
+
+  //- Message with letter sending error
+  template#error
+    section.error
+      .error__inner
+        h2.error__title(data-text='errorText') Letter sending error
+        button.error__button(type='button' data-text='errorBtn') Resend
+
+  //- Message about successful sending letter
+  template#success
+    section.success
+      .success__inner
+        h2.success__title(data-text='successText') Letter successfully sended
+        button.success__button(type='button' data-text='successBtn') Awesome !
+
+block js
+  script
+    include ../js/libs/bezier.js
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js")

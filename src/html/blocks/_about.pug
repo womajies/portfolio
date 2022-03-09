@@ -1,0 +1,41 @@
+section.about#about
+  h2.heading.about__title(data-text="headingAbout").
+    <span>about</span> me
+  .about__row
+    .about__info.info
+      h3.info__title(data-text="aboutName").
+        <span>name :</span> shamil magomedov
+      h3.info__title(data-text="aboutAge").
+        <span>age :</span> 24
+      h3.info__title(data-text="aboutQual").
+        <span>qualification :</span> BCS
+      h3.info__title(data-text="aboutPost").
+        <span>post :</span> front end developer
+      h3.info__title(data-text="aboutLang").
+        <span>language :</span> russian / english
+      .info__buttons
+        a(href="../files/cv.pdf" download)
+          button.btn.about__btn
+            div(data-text="aboutDownload") download CV
+            span
+              svg(width="20" height="20")
+                use(xlink:href="@img/sprites/sprite.svg#download")
+        a(href="#contact")
+          button.btn.about__btn
+            div(data-text="aboutHire") Hire me
+            span
+              svg(width="20" height="20")
+                use(xlink:href="@img/sprites/sprite.svg#calendar")
+    .about__counter.counter
+      .counter__box
+        span 3+
+        h3(data-text="aboutExpYears") years of experience
+      .counter__box
+        span 100+
+        h3(data-text="aboutCompleted") project completed
+      .counter__box
+        span 200+
+        h3(data-text="aboutClients") happy clients
+      .counter__box
+        span 2+
+        h3(data-text="aboutCourses") professional courses

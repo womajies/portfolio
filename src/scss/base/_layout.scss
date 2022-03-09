@@ -1,26 +1,56 @@
 @import "vars";
 @import "mixins";
-// @import "fonts";
+@import "fonts";
 @import "common";
 
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-size: 62.5%;
+
+  @media (max-width: 1200px) {
+    font-size: 55%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 50%;
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: $yellow-color;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+  font-family: "Nunito", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none !important;
+}
+
+*::selection {
+  background-color: $yellow-color;
+  color: #333333;
 }
 
 body {
-  background-color: $white-color;
-  font-family: "Helvetica", Arial, sans-serif;
+  background-color: #111111;
+  // background-color: #fcf2e8;
+  text-transform: capitalize;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,

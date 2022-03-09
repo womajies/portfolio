@@ -1,2 +1,42 @@
 header.header
-  .container
+  .user
+    picture
+      source(srcset="@img/avatar.webp, @img/avatar@2x.webp 1.5x" type="image/webp")
+      img(src="@img/avatar.jpg" srcset="@img/avatar@2x.jpg 1.5x" alt="Image")
+    h3.user__name Magomedov
+    p.user__post(data-text="headerPost") Front End Developer
+  nav.navbar
+    ul.navbar__menu.menu
+      li.menu__item
+        a.menu__link(href="#home" data-text="headerHome") home
+      li.menu__item
+        a.menu__link(href="#about" data-text="headerAbout") about
+      li.menu__item
+        a.menu__link(href="#experience" data-text="headerExp") experience
+      li.menu__item
+        a.menu__link(href="#portfolio" data-text="headerPortf") portfolio
+      li.menu__item
+        a.menu__link(href="#contact" data-text="headerContact") contact
+
+  .lang
+    .lang__header
+      button.lang__current(data-type="en" tabindex="0" aria-pressed="false" aria-label="Change language")
+        span en
+    .lang__body
+      button.lang__item(data-type="en")
+        span en
+      button.lang__item(data-type="ru")
+        span ru
+  ul.social
+    li.social__item
+      a.social__link(href="https://api.whatsapp.com/send/?phone=79634254691&text=Hello%2C+I+have+question" title="WhatsApp" target="_blank")
+        svg.social__icon(width="32" height="32")
+          use(xlink:href="@img/sprites/sprite.svg#social-whatsapp")
+    li.social__item
+      a.social__link(href="https://github.com/womajies" title="GitHub" target="_blank")
+        svg.social__icon(width="32" height="32")
+          use(xlink:href="@img/sprites/sprite.svg#social-github")
+    li.social__item
+      a.social__link(href="https://t.me/Magomedov_html" title="Telegram" target="_blank")
+        svg.social__icon(width="32" height="32")
+          use(xlink:href="@img/sprites/sprite.svg#social-telegram")

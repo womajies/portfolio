@@ -1,0 +1,41 @@
+section.contact#contact
+  h2.heading.contact__title(data-text="headingContact").
+    <span>contact</span> me
+  .contact__row
+    .contact__content
+      h3.contact__title(data-text="contactInfo") contact info
+      address.contact__info
+        a.contact__link(href="mailto:magomedov.html@yandex.ru")
+          span.contact__icon
+            svg(width="24" height="24")
+              use(xlink:href="@img/sprites/sprite-noattr.svg#email")
+          span.contact__value magomedov.html@yandex.ru
+        a.contact__link(href="tel:+79634254691")
+          span.contact__icon
+            svg(width="24" height="24")
+              use(xlink:href="@img/sprites/sprite-noattr.svg#phone")
+          span.contact__value +7-963-425-4691
+        a.contact__link(href="tel:+79898935677")
+          span.contact__icon
+            svg(width="24" height="24")
+              use(xlink:href="@img/sprites/sprite-noattr.svg#phone")
+          span.contact__value +7-989-893-5677
+        a.contact__link(href="https://yandex.ru/maps/-/CCU5fERT0B" target="_blank")
+          span.contact__icon
+            svg(width="24" height="24")
+              use(xlink:href="@img/sprites/sprite-noattr.svg#mark")
+          span.contact__value(data-text="contactAddress") Makhachkala, Russia - 367010.
+    form(action="mail.php" class="contact__feedback feedback" novalidate autocomplete="off" method="post")
+      input(type="text" placeholder="name" name="name" class="feedback__input" data-placeholder="formName" maxlength="60")
+      span.feedback__error(aria-live="polite")
+      input(type="email" placeholder="email" name="email" class="feedback__input" data-placeholder="formEmail")
+      span.feedback__error(aria-live="polite")
+      input(type="text" placeholder="project" name="project" class="feedback__input" data-placeholder="formProject")
+      textarea(name="message" id="message" cols="30" rows="10" class="feedback__input feedback__message" placeholder="message" data-placeholder="formMessage")
+      button(type="submit" class="btn feedback__btn")
+        div(data-text="contactBtn") send
+        span
+          svg(width="24" height="24")
+            use(xlink:href="@img/sprites/sprite-noattr.svg#paper")
+      .feedback__timer(data-text="formTimer").
+        Wait <span class="feedback__timer-value">30</span> seconds to submit the form again.
