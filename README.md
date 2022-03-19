@@ -1,5 +1,5 @@
-# Shamil Magomedov
-## Portfolio Web Developer
+# Shamil Magomedov [https://github.com/womajies/]
+## Web Developer Portfolio [https://vipdeveloper.ru/portfolio]
 
 **На борту сборки:**
 * ES6 импорт плагинов
