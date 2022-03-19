@@ -25,7 +25,9 @@ window.addEventListener('load', () => {
     closeMenu();
     headerAnim.restart();
     homeAnim.restart();
-    changeLang(localStorage.getItem('myLang'));
     preloader.classList.add('preloader-none');
+    if (!(localStorage.getItem('myLang') === null)) {
+      changeLang(localStorage.getItem('myLang'));
+    }
   }, 3200);
 });
