@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    padding: 2rem 0 5.8rem 0;
+    position: relative;
   }
 
   .box {
@@ -32,6 +33,31 @@
       height: 100%;
       object-fit: cover;
       transition: 0.3s ease transform;
+    }
+  }
+
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    svg {
+      stroke: $white-color;
+      fill: transparent;
+      transition: 0.3s ease transform;
+      transform: rotate(180deg);
+    }
+
+    &.showed {
+      svg {
+        transform: rotate(0deg);
+      }
     }
   }
 }

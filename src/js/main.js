@@ -6,6 +6,7 @@ import { closeMenu } from './modules/menu.js';
 import { headerAnim, homeAnim } from './modules/animations.js';
 import './modules/mouse.js';
 import './modules/smooth-scroll.js';
+import './modules/view-projects.js';
 import './modules/change-color-letter.js';
 import './modules/form.js';
 

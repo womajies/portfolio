@@ -22,7 +22,7 @@ import { reset } from './gulp/tasks/reset.js';
 import { pug } from './gulp/tasks/pug.js';
 import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
-import { js } from './gulp/tasks/js.js';
+import { js, jsLibs } from './gulp/tasks/js.js';
 import { img } from './gulp/tasks/img.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
 import { svgSpriteIcons, svgSpriteIconsNoattr } from './gulp/tasks/svgSprive.js';
@@ -45,7 +45,9 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 const svgSpriteTask = gulp.parallel(svgSpriteIcons, svgSpriteIconsNoattr);
 
-const mainTasks = gulp.series(fonts, svgSpriteTask, gulp.parallel(copy, pug, scss, js, img));
+const scripts = gulp.parallel(js, jsLibs);
+
+const mainTasks = gulp.series(fonts, svgSpriteTask, gulp.parallel(copy, pug, scss, scripts, img));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

@@ -8,6 +8,7 @@ const srcFolder = `./src`;
 export const path = {
   build: {
     js: `${buildFolder}/js/`,
+    jslibs: `${buildFolder}/js/libs/`,
     img: `${buildFolder}/img/`,
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
@@ -18,6 +19,7 @@ export const path = {
   },
   src: {
     js: `${srcFolder}/js/main.js`,
+    jslibs: `${srcFolder}/js/libs/*.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
