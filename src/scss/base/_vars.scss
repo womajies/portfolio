@@ -4,6 +4,7 @@ $black-color: #000000;
 $yellow-color: #f9ca24;
 
 // Breakpoints
+// min-width
 $desktopM: 2560px;
 $desktopS: 1920px;
 $desktop: 1680px;
@@ -14,11 +15,12 @@ $tablet: 768px;
 $mobileS: 480px;
 $mobile: 375px;
 
-$desktopS__max: max-width 2559px;
-$desktop__max: max-width 1919px;
-$laptopS__max: max-width 1679px;
-$laptop__max: max-width 1439px;
-$tabletS__max: max-width 1279px;
-$tablet__max: max-width 1023px;
-$mobileS__max: max-width 767px;
-$mobile__max: max-width 479px;
+// max-width
+$desktopS__max: 2559px;
+$desktop__max: 1919px;
+$laptopS__max: 1679px;
+$laptop__max: 1439px;
+$tabletS__max: 1279px;
+$tablet__max: 1023px;
+$mobileS__max: 767px;
+$mobile__max: 479px;
